@@ -54,9 +54,10 @@ These datasets were merged and preprocessed to engineer features such as **Loan-
 ---
 
 ## 📸 App Demo
+![App Demo](snapshot/image.png)
 
 🌐 Live Demo:  
-👉 [Lauki Finance: Credit Risk Modelling](#)  
+👉 [Lauki Finance: Credit Risk Modelling](https://credit-risk-modeling-1.streamlit.app/)  
 
 ---
 
