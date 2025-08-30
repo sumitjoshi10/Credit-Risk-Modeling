@@ -47,11 +47,22 @@ with row4[2]:
     loan_type = st.selectbox('Loan Type', ['Unsecured', 'Secured'])
 
 
+input_dict = {
+        'age': age,
+        'loan_tenure_months': loan_tenure_months,
+        'number_of_open_accounts': num_open_accounts,
+        'credit_utilization_ratio': credit_utilization_ratio,
+        'loan_to_income': loan_to_income_ratio,
+        'delinquency_ratio': delinquency_ratio,
+        'avg_dpd_per_delinquency': avg_dpd_per_delinquency,
+        'residence_type': residence_type,
+        'loan_purpose': loan_purpose,
+        'loan_type': loan_type
+}
+
 # Button to calculate risk
 if st.button('Calculate Risk'):
-    probability, credit_score, rating = predict(age, income, loan_amount, loan_tenure_months, avg_dpd_per_delinquency,
-                                                delinquency_ratio, credit_utilization_ratio, num_open_accounts,
-                                                residence_type, loan_purpose, loan_type)
+    probability, credit_score, rating = predict(input_dict)
 
     # Display the results
     st.write(f"Deafult Probability: {probability:.2%}")
